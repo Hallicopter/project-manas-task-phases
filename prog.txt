@@ -1,0 +1,7 @@
+November 30th: 
+Finished KNN assignment from cs231n covering the following topics: 
+> Find the  euclidean distance using one loop, two loops, and fully vectorised no loops
+> Using euclidean distatnces to predict the class of a an image
+> Using k-folds and cross entropy to find the best hyperparameter
+
+
