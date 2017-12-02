@@ -4,4 +4,11 @@ Finished KNN assignment from cs231n covering the following topics:
 > Using euclidean distatnces to predict the class of a an image
 > Using k-folds and cross entropy to find the best hyperparameter
 
+December 2nd:
+Done coding the gradient loss for SVM classifier.
+> Coded in an unvectorised implementation
+> Coded in a vectorised implementation
+> Implemented stochastic gradient descent, for the SVM classifier
+> Prediction and pushing the completed assignment will be done in the next commit.
+
 
