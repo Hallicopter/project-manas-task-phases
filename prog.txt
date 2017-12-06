@@ -11,4 +11,11 @@ Done coding the gradient loss for SVM classifier.
 > Implemented stochastic gradient descent, for the SVM classifier
 > Prediction and pushing the completed assignment will be done in the next commit.
 
+December 6th
+Done creating the publisher to one topic, Will start work on lane detection and subscriber work.
+Also done with the simple opencv stuff.
+Will try and finish a majority of the ros and opencv task by this week.
+I will get back to the machine learning bits a little later to mix things up.
+
+
 
