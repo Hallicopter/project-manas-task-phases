@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/advait/catkin_ws/install/setup.sh
