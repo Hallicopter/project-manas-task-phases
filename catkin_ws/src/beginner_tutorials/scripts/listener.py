@@ -9,6 +9,7 @@ import matplotlib.image as mpimg
 import numpy as np
 import math
 import os
+from std_msgs.msg import String
 
 # Instantiate CvBridge
 bridge = CvBridge()
@@ -144,6 +145,18 @@ def lanesheep(frame):
     cv2.line(frame,((x1_l/n_l),(y1_l)),(x2_l/n_l,y2_l),(0,255,0),30)
     cv2.imshow("Output", cv2.warpPerspective(frame, M_inv, (1280, 720), flags=cv2.INTER_LINEAR))
     cv2.waitKey(1)
+
+
+    pub = rospy.Publisher('custom_chatter', String)
+    # rospy.init_node('custom_talker', anonymous=True)
+    r = rospy.Rate(0.5) 
+
+
+    while not rospy.is_shutdown():
+        hello_str = "Slope 1: "+str((y1_r-y2_r)/(x1_r/n_r - x2_r/n_r))+"\nSlope 2:" + str((y1_l-y2_l)/(x1_l/n_l - x2_l/n_l))
+        rospy.loginfo(hello_str)
+        pub.publish(hello_str)
+        r.sleep()
 
 def image_callback(msg):
     print("Received an image!")
