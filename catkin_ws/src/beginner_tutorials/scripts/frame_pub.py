@@ -18,7 +18,7 @@ def image_publisher():
     rate = rospy.Rate(0.5)
     # Bridge module is for coverting ROS image type to opencv and vice versa
     bridge = CvBridge()
-    resource = '/home/advait/OpenCV/samples/data/vtest.avi'
+    resource = '/home/advait/catkin_ws/src/beginner_tutorials/scripts/lane_detection.py/lanevid.mov'
     cap = cv2.VideoCapture(resource)
     if not cap.isOpened():
         print ("Error opening resource: " + str(resource))
@@ -34,10 +34,10 @@ def image_publisher():
         # If frame exists, use ROS function to convert to ros message
         if frame is not None:
             frame = np.uint8(frame)
-        image_message = bridge.cv2_to_imgmsg(frame, encoding="passthrough")
+        image_message = bridge.cv2_to_imgmsg(frame, "bgr8")
 
         pub.publish(image_message)
-
+        print('Published succesfully!')
 
 
         key = cv2.waitKey(1000)
